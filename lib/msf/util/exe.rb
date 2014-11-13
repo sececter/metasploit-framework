@@ -8,16 +8,16 @@ module Util
 # formats for various platforms. It is a replacement for the previous
 # code in Rex::Text
 #
-class EXE
+###
 
 require 'rex'
-require 'rex/peparsey'
-require 'rex/pescan'
+
+autoload :Metasm, 'metasm'
 require 'rex/random_identifier_generator'
-require 'rex/zip'
-require 'metasm'
 require 'digest/sha1'
 require 'msf/core/exe/segment_injector'
+
+class EXE
 
   ##
   #
@@ -942,24 +942,24 @@ require 'msf/core/exe/segment_injector'
 
   def self.to_vba(framework,code,opts = {})
     hash_sub = {}
-    hash_sub[:var_myByte]		  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_myArray]		  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_rwxpage]  	  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_res]      	  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_offset] 		  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_myByte]      = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_myArray]      = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_rwxpage]      = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_res]          = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_offset]       = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_lpThreadAttributes] = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_dwStackSize]        = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_lpStartAddress]     = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_lpParameter]        = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_dwCreationFlags]	  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_dwCreationFlags]    = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_lpThreadID]         = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_lpAddr]             = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_lSize]              = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_flAllocationType]   = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
     hash_sub[:var_flProtect]          = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_lDest]	          = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_Source]	 	  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
-    hash_sub[:var_Length]		  = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_lDest]            = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_Source]       = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
+    hash_sub[:var_Length]      = Rex::Text.rand_text_alpha(rand(7)+3).capitalize
 
     # put the shellcode bytes into an array
     hash_sub[:bytes] = Rex::Text.to_vbapplication(code, hash_sub[:var_myArray])
@@ -1018,13 +1018,13 @@ require 'msf/core/exe/segment_injector'
 
   def self.to_exe_aspx(exes = '', opts = {})
     hash_sub = {}
-    hash_sub[:var_file] 	= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_tempdir] 	= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_basedir]	= Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_file]   = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_tempdir]   = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_basedir]  = Rex::Text.rand_text_alpha(rand(8)+8)
     hash_sub[:var_filename] = Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_tempexe] 	= Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_tempexe]   = Rex::Text.rand_text_alpha(rand(8)+8)
     hash_sub[:var_iterator] = Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_proc]	= Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_proc]  = Rex::Text.rand_text_alpha(rand(8)+8)
 
     hash_sub[:shellcode] = Rex::Text.to_csharp(exes,100,hash_sub[:var_file])
 
@@ -1066,13 +1066,13 @@ require 'msf/core/exe/segment_injector'
 
   def self.to_win32pe_psh(framework, code, opts = {})
     hash_sub = {}
-    hash_sub[:var_code] 		= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_win32_func]	= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_payload] 		= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_size] 		= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_rwx] 		= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_iter] 		= Rex::Text.rand_text_alpha(rand(8)+8)
-    hash_sub[:var_syscode] 		= Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_code]     = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_win32_func]  = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_payload]     = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_size]     = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_rwx]     = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_iter]     = Rex::Text.rand_text_alpha(rand(8)+8)
+    hash_sub[:var_syscode]     = Rex::Text.rand_text_alpha(rand(8)+8)
 
     hash_sub[:shellcode] = Rex::Text.to_powershell(code, hash_sub[:var_code])
 
@@ -1662,8 +1662,8 @@ require 'msf/core/exe/segment_injector'
 
     set_handler:
       xor eax,eax
-;		  push dword [fs:eax]
-;		  mov dword [fs:eax], esp
+;      push dword [fs:eax]
+;      mov dword [fs:eax], esp
       push eax               ; LPDWORD lpThreadId (NULL)
       push eax               ; DWORD dwCreationFlags (0)
       push eax               ; LPVOID lpParameter (NULL)
@@ -1674,10 +1674,10 @@ require 'msf/core/exe/segment_injector'
       call ebp               ; Spawn payload thread
 
       pop eax                ; Skip
-;		  pop eax                ; Skip
+;      pop eax                ; Skip
       pop eax                ; Skip
       popad                  ; Get our registers back
-;		  sub esp, 44             ; Move stack pointer back past the handler
+;      sub esp, 44             ; Move stack pointer back past the handler
     ^
 
     stub_final = %Q^

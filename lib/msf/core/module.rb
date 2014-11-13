@@ -1,6 +1,9 @@
 # -*- coding: binary -*-
 require 'msf/core'
 
+#require 'rex/ui'
+#require 'rex/ui/subscriber'
+
 module Msf
 
 ###

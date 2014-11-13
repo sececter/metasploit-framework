@@ -7,6 +7,8 @@ require 'msf/core/modules/namespace'
 require 'msf/core/modules/metasploit_class_compatibility_error'
 require 'msf/core/modules/version_compatibility_error'
 
+require 'active_support/inflector'
+
 # Responsible for loading modules for {Msf::ModuleManager}.
 #
 # @abstract Subclass and override {#each_module_reference_name}, {#loadable?}, {#module_path}, and
@@ -116,7 +118,7 @@ class Msf::Modules::Loader::Base
   # @see #read_module_content
   # @see Msf::ModuleManager::Loading#file_changed?
   def load_module(parent_path, type, module_reference_name, options={})
-    options.assert_valid_keys(:count_by_type, :force, :recalculate_by_type, :reload)
+    #options.assert_valid_keys(:count_by_type, :force, :recalculate_by_type, :reload)
     force = options[:force] || false
     reload = options[:reload] || false
 
@@ -253,7 +255,7 @@ class Msf::Modules::Loader::Base
   # @return [Hash{String => Integer}] Maps module type to number of
   #   modules loaded
   def load_modules(path, options={})
-    options.assert_valid_keys(:force, :whitelist)
+    #options.assert_valid_keys(:force, :whitelist)
 
     force = options[:force]
     count_by_type = {}
@@ -525,7 +527,7 @@ class Msf::Modules::Loader::Base
   end
 
   def namespace_module_transaction(module_full_name, options={}, &block)
-    options.assert_valid_keys(:reload)
+    #options.assert_valid_keys(:reload)
 
     reload = options[:reload] || false
     namespace_module_names = self.namespace_module_names(module_full_name)

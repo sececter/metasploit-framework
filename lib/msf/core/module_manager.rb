@@ -134,6 +134,97 @@ module Msf
       }
     end
 
+
+  ##
+  #
+  # Translate the provided refname (as used by people insider Metaslpoit), to
+  # two arrays for use when loading single modules.
+  #
+  # Motivation:
+  # There are special cases (staged payloads) that require loading multiple
+  # files.
+  #
+  # The first array corresponds to a directory path where the module lives.
+  # NOTE: This path is *NOT* a refname, and it is *NOT* a canonical file name.
+  # Instead, it is somewhere in the middle =)
+  #
+  # This is because the loader takes processes things as it walks the directory
+  # structure. So, we generate similar intermediate paths for the loader to
+  # consume.
+  #
+  # The first array, "files", includes intermediate filesystem-like paths for
+  # the necessary components for this refname.
+  # The second array, "paths", includes the paths
+  #
+  ##
+  def fullname_to_paths(type, parts)
+    files = []
+    paths = []
+
+    # pluralize the path if needed, due to refname and directory structure
+    # nomenclature mismatch...
+    type_str = type.dup
+    type_str << "s" if not [ MODULE_AUX, MODULE_POST ].include? type
+
+    module_paths.each { |path|
+
+      file_base = File.join(path, type_str)
+
+      # Payloads get special treatment
+      if type == MODULE_PAYLOAD
+        # Try single first
+        file = File.join(file_base, "singles", parts)
+        file << ".rb"
+        if File.exists?(file)
+          files << File.join("singles", parts)
+          paths << path
+          next
+        end
+
+        # Is the payload staged?
+        stager = parts.last
+        # XXX: It would be ideal if this could be resolved without hardcoding it here.
+        if stager =~ /^(reverse_|bind_|find_|passivex)/
+          os = parts[0,1].first
+          # Special case payloads (aliased handlers)
+          # XXX: It would be ideal if this could be resolved without hardcoding it here.
+          if os == "windows"
+            case stager
+            when "find_tag"
+              stager = "findtag_ord"
+            when "reverse_http"
+              stager = "passivex"
+            end
+          end
+
+          stage = parts[-2,1].first
+          rest = parts[0, parts.length - 2]
+          file1 = File.join(file_base, "stagers", rest, "#{stager}.rb")
+          file2 = File.join(file_base, "stages", rest, "#{stage}.rb")
+          next if not File.exists?(file1) or not File.exists?(file2)
+
+          # stager, then stage
+          files << File.join("stagers", rest, stager)
+          paths << path
+          files << File.join("stages", rest, stage)
+          paths << path
+        end
+
+      else
+        file = File.join(file_base, parts)
+        file << ".rb"
+        next if not File.exists?(file)
+        files << File.join(parts)
+        paths << path
+
+      end
+    }
+
+    ret = [ files, paths ]
+    ret
+  end
+
+
     protected
 
     # This method automatically subscribes a module to whatever event
@@ -173,3 +264,4 @@ module Msf
 
   end
 end
+

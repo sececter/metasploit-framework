@@ -37,7 +37,11 @@ class Msf::Modules::Loader::Directory < Msf::Modules::Loader::Base
       end
 
       full_entry_path = ::File.join(path, entry)
-      type = entry.singularize
+      if entry[-1,1] == 's'
+        type = entry.slice(0, entry.length - 1)
+      else
+        type = entry
+      end
 
       unless ::File.directory?(full_entry_path) and
              module_manager.type_enabled? type

@@ -3,25 +3,43 @@
 #
 # Auxiliary mixins
 #
-require 'msf/core/auxiliary/auth_brute'
-require 'msf/core/auxiliary/dos'
-require 'msf/core/auxiliary/drdos'
-require 'msf/core/auxiliary/fuzzer'
-require 'msf/core/auxiliary/report'
-require 'msf/core/auxiliary/scanner'
-require 'msf/core/auxiliary/udp_scanner'
-require 'msf/core/auxiliary/timed'
-require 'msf/core/auxiliary/wmapmodule'
-require 'msf/core/auxiliary/web'
-require 'msf/core/auxiliary/crawler'
+module Msf
+class Auxiliary
+  # Main types of auxiliary modules
+  autoload :AuthBrute,  'msf/core/auxiliary/auth_brute'
+  autoload :Dos,        'msf/core/auxiliary/dos'
+  autoload :DRDoS,      'msf/core/auxiliary/drdos'
+  autoload :Fuzzer,     'msf/core/auxiliary/fuzzer'
+  autoload :Scanner,    'msf/core/auxiliary/scanner'
+  autoload :UDPScanner, 'msf/core/auxiliary/udp_scanner'
+  autoload :Timed,      'msf/core/auxiliary/timed'
+  autoload :Web,        'msf/core/auxiliary/web'
 
-require 'msf/core/auxiliary/commandshell'
-require 'msf/core/auxiliary/login'
-require 'msf/core/auxiliary/rservices'
-require 'msf/core/auxiliary/cisco'
-require 'msf/core/auxiliary/kademlia'
-require 'msf/core/auxiliary/nmap'
-require 'msf/core/auxiliary/natpmp'
-require 'msf/core/auxiliary/iax2'
-require 'msf/core/auxiliary/ntp'
-require 'msf/core/auxiliary/pii'
+  # Wmap
+  autoload :WmapModule,          'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanSSL,         'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanFile,        'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanDir,         'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanServer,      'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanQuery,       'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanUniqueQuery, 'msf/core/auxiliary/wmapmodule'
+  autoload :WmapScanGeneric,     'msf/core/auxiliary/wmapmodule'
+  autoload :WmapCrawler,         'msf/core/auxiliary/wmapmodule'
+  autoload :HttpCrawler,         'msf/core/auxiliary/crawler'
+
+  # Miscallaneous
+  autoload :Report,        'msf/core/auxiliary/report'
+  autoload :CommandShell,  'msf/core/auxiliary/commandshell'
+  autoload :Nmap,          'msf/core/auxiliary/nmap'
+  autoload :PII,           'msf/core/auxiliary/pii'
+
+  # Protocol augmenters for Aux modules
+  autoload :Login,     'msf/core/auxiliary/login'
+  autoload :RServices, 'msf/core/auxiliary/rservices'
+  autoload :Cisco,     'msf/core/auxiliary/cisco'
+  autoload :IAX2,      'msf/core/auxiliary/iax2'
+  autoload :NTP,       'msf/core/auxiliary/ntp'
+  autoload :NATPMP,    'msf/core/auxiliary/natpmp'
+
+end
+end

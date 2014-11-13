@@ -1,3 +1,4 @@
 # -*- coding: binary -*-
-require 'rex/payloads/win32'
-require 'rex/payloads/meterpreter'
+module Rex::Payloads
+  autoload :Win32, 'rex/payloads/win32'
+end

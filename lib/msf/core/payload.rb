@@ -1,6 +1,6 @@
 # -*- coding: binary -*-
 require 'msf/core'
-require 'metasm'
+autoload :Metasm, 'metasm'
 
 module Msf
 
@@ -15,21 +15,21 @@ class Payload < Msf::Module
 
   require 'rex/payloads'
 
-  require 'msf/core/payload/single'
-  require 'msf/core/payload/generic'
-  require 'msf/core/payload/stager'
+  autoload :Single,  'msf/core/payload/single'
+  autoload :Generic, 'msf/core/payload/generic'
+  autoload :Stager,  'msf/core/payload/stager'
 
   # Platform specific includes
-  require 'msf/core/payload/aix'
-  require 'msf/core/payload/bsd'
-  require 'msf/core/payload/linux'
-  require 'msf/core/payload/osx'
-  require 'msf/core/payload/solaris'
-  require 'msf/core/payload/windows'
-  require 'msf/core/payload/netware'
-  require 'msf/core/payload/java'
-  require 'msf/core/payload/dalvik'
-  require 'msf/core/payload/firefox'
+  autoload :Aix,     'msf/core/payload/aix'
+  autoload :Bsd,     'msf/core/payload/bsd'
+  autoload :Linux,   'msf/core/payload/linux'
+  autoload :Osx,     'msf/core/payload/osx'
+  autoload :Solaris, 'msf/core/payload/solaris'
+  autoload :Windows, 'msf/core/payload/windows'
+  autoload :Netware, 'msf/core/payload/netware'
+  autoload :Java,    'msf/core/payload/java'
+  autoload :Dalvik,  'msf/core/payload/dalvik'
+  autoload :Firefox, 'msf/core/payload/firefox'
 
   ##
   #
@@ -461,7 +461,7 @@ class Payload < Msf::Module
       begin
         assoc_exploit.on_new_session(session)
       rescue ::Exception => e
-        dlog("#{assoc_exploit.refname}: on_new_session handler triggered exception: #{e.class} #{e} #{e.backtrace}", 'core', LEV_1)	rescue nil
+        dlog("#{assoc_exploit.refname}: on_new_session handler triggered exception: #{e.class} #{e} #{e.backtrace}", 'core', LEV_1)  rescue nil
       end
 
       # Set the abort sockets flag only if the exploit is not passive
