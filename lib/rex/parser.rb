@@ -23,7 +23,7 @@ module Parser
   autoload :NmapDocument,              'rex/parser/nmap_nokogiri'
   autoload :OpenVASDocument,           'rex/parser/openvas_nokogiri'
   autoload :WapitiDocument,            'rex/parser/wapiti_nokogiri'
-  autoload :Outpost24Document,         'rex/parser/output24_nokogiri'
+  autoload :Outpost24Document,         'rex/parser/outpost24_nokogiri'
 
   # Legacy XML parsers -- these will be converted some day
   autoload :NmapXMLStreamParser,       'rex/parser/nmap_xml'
