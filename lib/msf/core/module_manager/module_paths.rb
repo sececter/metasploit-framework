@@ -8,7 +8,6 @@ require 'active_support/core_ext/module'
 
 # Deals with module paths in the {Msf::ModuleManager}
 module Msf::ModuleManager::ModulePaths
-  extend ActiveSupport::Concern
 
   # Adds a path to be searched for new modules.
   #

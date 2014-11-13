@@ -1,6 +1,7 @@
 # -*- coding: binary -*-
 require 'msf/core'
 require 'pathname'
+require 'set'
 
 #
 # Define used for a place-holder module that is used to indicate that the

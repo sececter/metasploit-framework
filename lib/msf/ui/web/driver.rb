@@ -8,7 +8,6 @@ module Msf
 module Ui
 module Web
 
-require 'rex/io/bidirectional_pipe'
 require 'msf/ui/web/console'
 
 

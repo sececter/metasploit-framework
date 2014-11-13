@@ -7,6 +7,7 @@
 require 'rex/poly'
 require 'msf/core'
 
+require 'msf/core/encoder'
 
 class Metasploit3 < Msf::Encoder::XorAdditiveFeedback
 

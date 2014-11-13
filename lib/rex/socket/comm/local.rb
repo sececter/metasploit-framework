@@ -1,11 +1,7 @@
 # -*- coding: binary -*-
-require 'singleton'
+require 'rex/compat'
 require 'rex/socket'
-require 'rex/socket/tcp'
-require 'rex/socket/ssl_tcp'
-require 'rex/socket/ssl_tcp_server'
-require 'rex/socket/udp'
-require 'rex/socket/ip'
+require 'singleton'
 require 'timeout'
 
 ###
