@@ -191,7 +191,7 @@ class Rex::Socket::Comm::Local
 
       rescue ::Errno::EADDRNOTAVAIL,::Errno::EADDRINUSE
         sock.close
-        raise Rex::AddressInUse.new(param.localhost, param.localport), caller
+        raise Rex::BindFailed.new(param.localhost, param.localport), caller
       end
     end
 
@@ -291,7 +291,7 @@ class Rex::Socket::Comm::Local
 
         rescue ::Errno::EADDRNOTAVAIL,::Errno::EADDRINUSE
           sock.close
-          raise Rex::AddressInUse.new(ip, port), caller
+          raise Rex::InvalidDestination.new(ip, port), caller
 
         rescue Errno::ETIMEDOUT
           sock.close
