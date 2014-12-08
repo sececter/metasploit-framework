@@ -4,9 +4,9 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/exe_format/main'
-require 'metasm/exe_format/mz'
-require 'metasm/exe_format/coff'
+require 'metasm/metasm/exe_format/main'
+require 'metasm/metasm/exe_format/mz'
+require 'metasm/metasm/exe_format/coff'
 
 module Metasm
 class PE < COFF

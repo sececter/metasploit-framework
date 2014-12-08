@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm'
+require 'metasm/metasm'
 Metasm.require 'samples/metasm-shell'
 
 include Metasm

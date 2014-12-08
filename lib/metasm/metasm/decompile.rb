@@ -4,9 +4,9 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/decode'
-require 'metasm/parse_c'
+require 'metasm/metasm/main'
+require 'metasm/metasm/decode'
+require 'metasm/metasm/parse_c'
 
 module Metasm
 class C::Variable; attr_accessor :stackoff; end

@@ -10,7 +10,7 @@
 # ruby -h for help
 #
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 require 'optparse'
 

@@ -9,7 +9,7 @@
 # by the Elf class autoimport functionnality (see metasm/os/linux.rb)
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 bd = 'GLOBAL'
 bd = 'WEAK' if ARGV.delete '--weak'

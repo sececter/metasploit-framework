@@ -10,7 +10,7 @@
 # it displays in a messagebox the result of CPUID
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 pe = Metasm::PE.assemble Metasm::Ia32.new, <<EOS
 .text

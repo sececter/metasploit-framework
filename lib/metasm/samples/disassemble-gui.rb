@@ -24,7 +24,7 @@
 #  ctrl+mousewheel to zoom in graph view ; also doubleclick on the background ('fit to window'/'reset zoom')
 #
 
-require 'metasm'
+require 'metasm/metasm'
 require 'optparse'
 
 $VERBOSE = true

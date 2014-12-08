@@ -17,7 +17,7 @@
 #
 # XXX obsolete, should replace all virtallocex etc by WinOS calls
 
-require 'metasm'
+require 'metasm/metasm'
 
 include Metasm
 

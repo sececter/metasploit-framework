@@ -11,7 +11,7 @@
 # of the dll is correctly encoded
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 cpu = Metasm::Ia32.new
 

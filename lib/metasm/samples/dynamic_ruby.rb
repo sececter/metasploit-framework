@@ -8,7 +8,7 @@
 # Includes methods to dump the ruby parser AST from the interpreter memory
 # elf/linux/x86 only
 
-require 'metasm'
+require 'metasm/metasm'
 
 
 module Metasm

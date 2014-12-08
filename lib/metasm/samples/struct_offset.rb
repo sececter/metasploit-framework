@@ -8,7 +8,7 @@
 # usage: struct_offset.rb <c file> <struct name>
 #
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 
 require 'optparse'

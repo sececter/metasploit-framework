@@ -13,7 +13,7 @@
 # to compile a shellcode to a cstring, use --cstring
 #
 
-require 'metasm'
+require 'metasm/metasm'
 require 'optparse'
 
 $opts ||= {}

@@ -15,7 +15,7 @@
 # the buffer 1st dword is the number of used dwords in the buffer (0 = empty)
 # on overflow, eips are lost
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 
 $drv = 'r0trace.sys'

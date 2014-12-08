@@ -6,9 +6,9 @@
 class Metasm::MIPS < Metasm::CPU
 end
 
-require 'metasm/main'
-require 'metasm/cpu/mips/parse'
-require 'metasm/cpu/mips/encode'
-require 'metasm/cpu/mips/decode'
-require 'metasm/cpu/mips/render'
-require 'metasm/cpu/mips/debug'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/mips/parse'
+require 'metasm/metasm/cpu/mips/encode'
+require 'metasm/metasm/cpu/mips/decode'
+require 'metasm/metasm/cpu/mips/render'
+require 'metasm/metasm/cpu/mips/debug'

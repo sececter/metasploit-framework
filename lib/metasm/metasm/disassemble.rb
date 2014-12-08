@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/decode'
+require 'metasm/metasm/decode'
 
 
 module Metasm
@@ -2217,4 +2217,4 @@ puts "   backtrace_indirection for #{ind.target} failed: #{ev}" if debug_backtra
 end
 end
 
-require 'metasm/disassemble_api'
+require 'metasm/metasm/disassemble_api'

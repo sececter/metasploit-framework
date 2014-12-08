@@ -10,7 +10,7 @@
 # usage : scan_pt_gnu_stack.rb <dir> [<dir>]
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 def _puts(a)
   puts a.to_s.ljust(60)

@@ -5,7 +5,7 @@
 
 
 require 'test/unit'
-require 'metasm'
+require 'metasm/metasm'
 
 class TestIa32 < Test::Unit::TestCase
   @@cpu32 = Metasm::Ia32.new

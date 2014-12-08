@@ -13,7 +13,7 @@
 # usage: dump_upx.rb <packed.exe> [<dumped.exe>] [<iat (r)va>] [--oep <rva>]
 #
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 
 class UPXUnpacker

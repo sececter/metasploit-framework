@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/msp430/main'
+require 'metasm/metasm/cpu/msp430/main'
 
 module Metasm
 class MSP430

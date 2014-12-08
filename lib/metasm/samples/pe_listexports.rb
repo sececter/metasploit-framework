@@ -9,7 +9,7 @@
 # by the PE class autoimport functionnality (see metasm/os/windows.rb)
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 ARGV.each { |f|
   pe = Metasm::PE.decode_file_header(f) rescue next

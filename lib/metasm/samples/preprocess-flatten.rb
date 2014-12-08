@@ -10,7 +10,7 @@
 # it also dumps all macro definitions
 #
 
-require 'metasm/preprocessor'
+require 'metasm/metasm/preprocessor'
 
 p = Metasm::Preprocessor.new
 p.feed(ARGF.read)

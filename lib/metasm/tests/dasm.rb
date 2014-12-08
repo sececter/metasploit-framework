@@ -5,7 +5,7 @@
 
 
 require 'test/unit'
-require 'metasm'
+require 'metasm/metasm'
 
 class TestPreproc < Test::Unit::TestCase
   include Metasm

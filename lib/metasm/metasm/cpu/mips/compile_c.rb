@@ -3,5 +3,5 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/mips/parse'
-require 'metasm/compile_c'
+require 'metasm/metasm/cpu/mips/parse'
+require 'metasm/metasm/compile_c'

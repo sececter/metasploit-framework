@@ -7,5 +7,5 @@
 class Metasm::Dalvik < Metasm::CPU
 end
 
-require 'metasm/main'
-require 'metasm/cpu/dalvik/decode'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/dalvik/decode'

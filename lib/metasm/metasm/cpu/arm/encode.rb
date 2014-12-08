@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/arm/opcodes'
-require 'metasm/encode'
+require 'metasm/metasm/cpu/arm/opcodes'
+require 'metasm/metasm/encode'
 
 module Metasm
 class ARM

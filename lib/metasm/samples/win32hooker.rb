@@ -14,7 +14,7 @@
 # usage: ruby w32hook.rb notepad ; then go in notepad, type some words and save to a file
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 include Metasm
 

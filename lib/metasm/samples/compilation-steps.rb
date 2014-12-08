@@ -5,7 +5,7 @@
 
 # shows the compilation phase step by step: c, simplified c, asm
 
-require 'metasm'
+require 'metasm/metasm'
 require 'optparse'
 
 opts = { :cpu => 'Ia32', :exe => 'Shellcode', :macros => {} }

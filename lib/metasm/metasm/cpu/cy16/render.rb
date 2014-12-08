@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/cy16/opcodes'
-require 'metasm/render'
+require 'metasm/metasm/cpu/cy16/opcodes'
+require 'metasm/metasm/render'
 
 module Metasm
 class CY16

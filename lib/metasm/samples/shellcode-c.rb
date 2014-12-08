@@ -9,7 +9,7 @@
 # in this exemple we can write a shellcode using a C function
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 # load and decode the file
 sc = Metasm::Shellcode.new(Metasm::Ia32.new)

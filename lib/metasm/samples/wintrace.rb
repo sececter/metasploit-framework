@@ -10,7 +10,7 @@
 # all callbacks are full ruby, so this is extremely slow !
 #
 
-require 'metasm'
+require 'metasm/metasm'
 Metasm.require 'samples/metasm-shell'
 
 class Tracer < Metasm::WinDbgAPI

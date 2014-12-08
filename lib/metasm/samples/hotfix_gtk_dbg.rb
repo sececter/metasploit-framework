@@ -17,7 +17,7 @@
 # ...
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 include Metasm
 

@@ -6,10 +6,10 @@
 class Metasm::X86_64 < Metasm::Ia32
 end
 
-require 'metasm/main'
-require 'metasm/cpu/x86_64/parse'
-require 'metasm/cpu/x86_64/encode'
-require 'metasm/cpu/x86_64/decode'
-require 'metasm/cpu/x86_64/render'
-require 'metasm/cpu/x86_64/debug'
-require 'metasm/cpu/x86_64/compile_c'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/x86_64/parse'
+require 'metasm/metasm/cpu/x86_64/encode'
+require 'metasm/metasm/cpu/x86_64/decode'
+require 'metasm/metasm/cpu/x86_64/render'
+require 'metasm/metasm/cpu/x86_64/debug'
+require 'metasm/metasm/cpu/x86_64/compile_c'

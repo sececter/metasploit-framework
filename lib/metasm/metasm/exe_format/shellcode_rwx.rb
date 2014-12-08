@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/exe_format/main'
+require 'metasm/metasm/exe_format/main'
 
 module Metasm
 # Similar to Shellcode, with distinct sections per memory permission (R / RW / RX)

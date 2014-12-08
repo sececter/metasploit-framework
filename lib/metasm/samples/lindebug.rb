@@ -7,7 +7,7 @@
 # this is a linux/x86 debugger with a console interface
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 module Ansi
   CursHome = "\e[H".freeze

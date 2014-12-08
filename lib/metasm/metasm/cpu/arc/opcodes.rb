@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/arc/main'
+require 'metasm/metasm/cpu/arc/main'
 
 module Metasm
 class ARC

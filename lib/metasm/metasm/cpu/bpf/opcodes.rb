@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/bpf/main'
+require 'metasm/metasm/cpu/bpf/main'
 
 module Metasm
 

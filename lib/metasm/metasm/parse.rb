@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/preprocessor'
+require 'metasm/metasm/main'
+require 'metasm/metasm/preprocessor'
 
 module Metasm
 class Data

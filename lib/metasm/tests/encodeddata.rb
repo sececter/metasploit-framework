@@ -5,7 +5,7 @@
 
 
 require 'test/unit'
-require 'metasm/exe_format/shellcode'
+require 'metasm/metasm/exe_format/shellcode'
 
 class TestEncodedData < Test::Unit::TestCase
   def compile(src)

@@ -7,7 +7,7 @@
 # Map a PE file under another OS using DynLdr, API imports are redirected to ruby callback for emulation
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 class PeLdr
   attr_accessor :pe, :load_address

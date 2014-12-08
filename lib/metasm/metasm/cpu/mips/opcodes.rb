@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/mips/main'
+require 'metasm/metasm/cpu/mips/main'
 
 # TODO coprocessors, floating point, 64bits, thumb mode
 

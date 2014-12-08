@@ -10,7 +10,7 @@
 # patch the entrypoint so that we are executed at program start
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 # read original file
 raise 'need a target filename' if not target = ARGV.shift

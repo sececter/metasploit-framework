@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/sh4/main'
+require 'metasm/metasm/cpu/sh4/main'
 
 module Metasm
 class Sh4

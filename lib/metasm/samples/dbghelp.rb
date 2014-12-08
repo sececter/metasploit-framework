@@ -5,7 +5,7 @@
 
 # a preleminary attempt to use MS dbghelp.dll to retrieve PE symbols
 
-require 'metasm'
+require 'metasm/metasm'
 
 dll = 'C:\\Program Files\\Debugging Tools For Windows (x86)\\dbghelp.dll'
 

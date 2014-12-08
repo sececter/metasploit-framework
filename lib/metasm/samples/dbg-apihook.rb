@@ -14,7 +14,7 @@
 # skip the first two bytes of the buffer.
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 class ApiHook
   attr_accessor :dbg

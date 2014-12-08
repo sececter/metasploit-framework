@@ -10,7 +10,7 @@
 # the header part comes from the factorize sample script
 #
 
-require 'metasm'
+require 'metasm/metasm'
 cpu = Metasm::Ia32.new
 cpu.generate_PIC = false
 Metasm::PE.compile_c(cpu, DATA.read + <<EOS).encode_file('metasm-shutdown.exe')

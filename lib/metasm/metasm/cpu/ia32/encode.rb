@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/ia32/opcodes'
-require 'metasm/encode'
+require 'metasm/metasm/cpu/ia32/opcodes'
+require 'metasm/metasm/encode'
 
 module Metasm
 class Ia32
