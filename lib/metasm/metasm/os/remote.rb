@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/os/main'
-require 'metasm/debug'
+require 'metasm/metasm/os/main'
+require 'metasm/metasm/debug'
 require 'socket'
 
 module Metasm

@@ -9,7 +9,7 @@
 #
 # This shows how to mix C and asm, and a few WinOS functions.
 
-require 'metasm'
+require 'metasm/metasm'
 
 include Metasm
 

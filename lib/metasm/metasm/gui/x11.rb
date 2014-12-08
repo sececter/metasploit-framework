@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/dynldr'
+require 'metasm/metasm/dynldr'
 
 module Metasm
 module Gui
@@ -616,6 +616,6 @@ end
 end
 end
 
-#require 'metasm/gui/dasm_main'
-#require 'metasm/gui/debug'
+#require 'metasm/metasm/gui/dasm_main'
+#require 'metasm/metasm/gui/debug'
 

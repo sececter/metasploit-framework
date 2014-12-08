@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/python/main'
+require 'metasm/metasm/cpu/python/main'
 
 module Metasm
 class Python

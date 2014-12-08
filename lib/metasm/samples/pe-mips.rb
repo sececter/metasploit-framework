@@ -11,7 +11,7 @@
 #
 
 
-require 'metasm'
+require 'metasm/metasm'
 
 cpu = Metasm::MIPS.new(:little)
 prog = Metasm::PE.assemble(cpu, <<EOS)

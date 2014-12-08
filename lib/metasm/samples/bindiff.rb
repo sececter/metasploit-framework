@@ -15,7 +15,7 @@
 # This file can be run as a standalone application (eg 'ruby bindiff file1 file2')
 # or as a disassembler plugin (see dasm-plugin/bindiff)
 
-require 'metasm'
+require 'metasm/metasm'
 
 module ::Metasm
 class BinDiffWidget < Gui::DrawableWidget

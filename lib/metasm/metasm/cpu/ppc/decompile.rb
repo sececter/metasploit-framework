@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/ppc/main'
+require 'metasm/metasm/cpu/ppc/main'
 
 module Metasm
 class PowerPC

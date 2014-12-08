@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/mips/opcodes'
-require 'metasm/decode'
+require 'metasm/metasm/cpu/mips/opcodes'
+require 'metasm/metasm/decode'
 
 module Metasm
 class MIPS

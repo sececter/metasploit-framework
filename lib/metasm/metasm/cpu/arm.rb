@@ -6,9 +6,9 @@
 class Metasm::ARM < Metasm::CPU
 end
 
-require 'metasm/main'
-require 'metasm/cpu/arm/parse'
-require 'metasm/cpu/arm/encode'
-require 'metasm/cpu/arm/decode'
-require 'metasm/cpu/arm/render'
-require 'metasm/cpu/arm/debug'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/arm/parse'
+require 'metasm/metasm/cpu/arm/encode'
+require 'metasm/metasm/cpu/arm/decode'
+require 'metasm/metasm/cpu/arm/render'
+require 'metasm/metasm/cpu/arm/debug'

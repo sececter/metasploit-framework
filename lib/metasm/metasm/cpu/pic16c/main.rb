@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
+require 'metasm/metasm/main'
 
 module Metasm
 class Pic16c < CPU

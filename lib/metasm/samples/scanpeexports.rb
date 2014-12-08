@@ -8,7 +8,7 @@
 # usage : ruby scanpeexports.rb <dir> <pattern>
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 if not base = ARGV.shift
   puts 'base dir ?'

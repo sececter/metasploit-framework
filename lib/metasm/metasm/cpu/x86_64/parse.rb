@@ -4,9 +4,9 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/x86_64/opcodes'
-require 'metasm/cpu/x86_64/encode'
-require 'metasm/parse'
+require 'metasm/metasm/cpu/x86_64/opcodes'
+require 'metasm/metasm/cpu/x86_64/encode'
+require 'metasm/metasm/parse'
 
 module Metasm
 class X86_64

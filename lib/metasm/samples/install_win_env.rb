@@ -12,7 +12,7 @@
 metasmpath = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
 $: << metasmpath
-require 'metasm'
+require 'metasm/metasm'
 
 d = Metasm::DynLdr
 

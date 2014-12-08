@@ -8,7 +8,7 @@
 # windows only, supposes the shellcode is run in the address space of a process
 # whose PEB allows to find all required libraries.
 
-require 'metasm'
+require 'metasm/metasm'
 
 sc = Metasm::Shellcode.new(Metasm::Ia32.new)
 

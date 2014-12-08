@@ -3,8 +3,8 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/msp430/opcodes'
-require 'metasm/decode'
+require 'metasm/metasm/cpu/msp430/opcodes'
+require 'metasm/metasm/decode'
 
 module Metasm
 class MSP430

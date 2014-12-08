@@ -10,7 +10,7 @@
 
 # TODO handle COFF symbols (for .lib)
 
-require 'metasm'
+require 'metasm/metasm'
 
 include Metasm
 

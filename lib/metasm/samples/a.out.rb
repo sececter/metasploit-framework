@@ -7,7 +7,7 @@
 # here we build a simple a.out executable
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 Metasm::AOut.assemble(Metasm::Ia32.new, <<EOS).encode_file('m-a.out')
 .text

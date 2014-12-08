@@ -7,7 +7,7 @@
 # special file to test the graph layout engine
 # call this file directly to run
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 
 def test_layout(lo)

@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/cpu/ia32'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/ia32'
 
 module Metasm
 

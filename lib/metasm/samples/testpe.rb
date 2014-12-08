@@ -10,7 +10,7 @@
 #
 
 
-require 'metasm'
+require 'metasm/metasm'
 
 pe = Metasm::PE.assemble Metasm::Ia32.new, <<EOS
 .entrypoint

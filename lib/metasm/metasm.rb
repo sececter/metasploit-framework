@@ -7,9 +7,9 @@
 module Metasm
   # root directory for metasm files
   # used by some scripts, eg to find samples/dasm-plugin directory
-  Metasmdir = File.dirname(__FILE__)
+  #Metasmdir = File.dirname(__FILE__)
   # add it to the ruby library path
-  $: << Metasmdir
+  #$: << Metasmdir
 
   # constants defined in the same file as another
   Const_autorequire_equiv = {
@@ -62,18 +62,18 @@ module Metasm
 
   # use the Module.autoload ruby functionnality to load framework components on demand
   Const_autorequire.each { |cst, file|
-    autoload cst, File.join('metasm', file)
+    autoload cst, File.join('metasm', 'metasm', file)
   }
 
   Const_autorequire_equiv.each { |cst, eqv|
     file = Const_autorequire[eqv]
-    autoload cst, File.join('metasm', file)
+    autoload cst, File.join('metasm', 'metasm', file)
   }
 end
 
 # load Metasm core files
 %w[main encode decode render exe_format/main os/main].each { |f|
-  require File.join('metasm', f)
+  require File.join('metasm', 'metasm', f)
 }
 
 

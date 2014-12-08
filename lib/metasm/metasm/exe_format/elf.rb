@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/exe_format/main'
+require 'metasm/metasm/exe_format/main'
 
 module Metasm
 class ELF < ExeFormat
@@ -784,8 +784,8 @@ class FatELF < ExeFormat
 end
 end
 
-require 'metasm/exe_format/elf_encode'
-require 'metasm/exe_format/elf_decode'
+require 'metasm/metasm/exe_format/elf_encode'
+require 'metasm/metasm/exe_format/elf_decode'
 
 # TODO symbol version info
 __END__

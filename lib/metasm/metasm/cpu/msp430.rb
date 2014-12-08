@@ -4,5 +4,5 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/cpu/msp430/decode'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/msp430/decode'

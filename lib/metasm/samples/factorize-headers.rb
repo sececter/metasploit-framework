@@ -12,7 +12,7 @@
 # with a single argument, uses GCC standard headers
 #
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 
 abort 'target needed' if not file = ARGV.shift

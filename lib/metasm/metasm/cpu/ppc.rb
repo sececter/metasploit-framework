@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/cpu/ppc/parse'
-require 'metasm/cpu/ppc/encode'
-require 'metasm/cpu/ppc/decode'
-require 'metasm/cpu/ppc/decompile'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/ppc/parse'
+require 'metasm/metasm/cpu/ppc/encode'
+require 'metasm/metasm/cpu/ppc/decode'
+require 'metasm/metasm/cpu/ppc/decompile'

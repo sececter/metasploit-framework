@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/decode'
-require 'metasm/exe_format/elf' unless defined? Metasm::ELF
+require 'metasm/metasm/decode'
+require 'metasm/metasm/exe_format/elf' unless defined? Metasm::ELF
 
 module Metasm
 class ELF

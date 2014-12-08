@@ -5,8 +5,8 @@
 
 
 require 'test/unit'
-require 'metasm/preprocessor'
-require 'metasm/parse'
+require 'metasm/metasm/preprocessor'
+require 'metasm/metasm/parse'
 
 
 # BEWARE OF TEH RUBY PARSER

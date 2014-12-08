@@ -1001,6 +1001,6 @@ end
 end
 end
 
-require 'metasm/gui/dasm_main'
-require 'metasm/gui/debug'
+require 'metasm/metasm/gui/dasm_main'
+require 'metasm/metasm/gui/debug'
 

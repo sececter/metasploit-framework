@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/render'
+require 'metasm/metasm/main'
+require 'metasm/metasm/render'
 
 module Metasm
 class PowerPC < CPU

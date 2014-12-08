@@ -4,6 +4,6 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/cpu/bpf/decode'
-require 'metasm/cpu/bpf/render'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/bpf/decode'
+require 'metasm/metasm/cpu/bpf/render'

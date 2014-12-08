@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/bpf/opcodes'
-require 'metasm/render'
+require 'metasm/metasm/cpu/bpf/opcodes'
+require 'metasm/metasm/render'
 
 module Metasm
 class BPF

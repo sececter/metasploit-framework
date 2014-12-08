@@ -8,7 +8,7 @@
 
 # usage: test.rb < source.asm
 
-require 'metasm'
+require 'metasm/metasm'
 
 
 dump = ARGV.delete '--dump'

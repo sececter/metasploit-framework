@@ -9,7 +9,7 @@
 # usage: factorize-imports.rb <exe> <exe2> <path to visual studio installation> [<additional func names>... ^<func to exclude>]
 #
 
-require 'metasm'
+require 'metasm/metasm'
 include Metasm
 
 require 'optparse'

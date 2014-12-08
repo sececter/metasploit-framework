@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/exe_format/main'
+require 'metasm/metasm/exe_format/main'
 
 module Metasm
 # special class that decodes a PE, ELF, MachO or UnivBinary file from its signature

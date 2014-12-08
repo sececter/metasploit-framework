@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/pic16c/opcodes'
-require 'metasm/decode'
+require 'metasm/metasm/cpu/pic16c/opcodes'
+require 'metasm/metasm/decode'
 
 module Metasm
 class Pic16c

@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/gui/dasm_main'
+require 'metasm/metasm/gui/dasm_main'
 
 module Metasm
 module Gui

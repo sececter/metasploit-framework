@@ -3,9 +3,9 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/os/main'
-require 'metasm/debug'
-require 'metasm/dynldr'
+require 'metasm/metasm/os/main'
+require 'metasm/metasm/debug'
+require 'metasm/metasm/dynldr'
 
 module Metasm
 class WinAPI < DynLdr

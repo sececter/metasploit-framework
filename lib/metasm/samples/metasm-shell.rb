@@ -17,7 +17,7 @@
 # "\x90\x90"
 # > exit
 
-require 'metasm'
+require 'metasm/metasm'
 
 class String
   @@cpu = Metasm::Ia32.new

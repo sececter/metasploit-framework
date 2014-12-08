@@ -3,8 +3,8 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/render'
-require 'metasm/cpu/arm/opcodes'
+require 'metasm/metasm/render'
+require 'metasm/metasm/cpu/arm/opcodes'
 
 module Metasm
 class ARM

@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/ia32/opcodes'
-require 'metasm/render'
+require 'metasm/metasm/cpu/ia32/opcodes'
+require 'metasm/metasm/render'
 
 # XXX move context in another file ?
 module Metasm

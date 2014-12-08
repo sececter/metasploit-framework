@@ -4,6 +4,6 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/cpu/cy16/decode'
-require 'metasm/cpu/cy16/render'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/cy16/decode'
+require 'metasm/metasm/cpu/cy16/render'

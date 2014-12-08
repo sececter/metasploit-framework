@@ -13,7 +13,7 @@
 #
 
 
-require 'metasm'
+require 'metasm/metasm'
 
 class SyscallHooker < Metasm::PTrace
   CTX = ['EBX', 'ECX', 'EDX', 'ESI', 'EDI', 'EAX', 'ESP', 'EBP', 'EIP', 'ORIG_EAX']

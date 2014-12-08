@@ -7,11 +7,11 @@
 class Metasm::Ia32 < Metasm::CPU
 end
 
-require 'metasm/main'
-require 'metasm/cpu/ia32/parse'
-require 'metasm/cpu/ia32/encode'
-require 'metasm/cpu/ia32/decode'
-require 'metasm/cpu/ia32/render'
-require 'metasm/cpu/ia32/compile_c'
-require 'metasm/cpu/ia32/decompile'
-require 'metasm/cpu/ia32/debug'
+require 'metasm/metasm/main'
+require 'metasm/metasm/cpu/ia32/parse'
+require 'metasm/metasm/cpu/ia32/encode'
+require 'metasm/metasm/cpu/ia32/decode'
+require 'metasm/metasm/cpu/ia32/render'
+require 'metasm/metasm/cpu/ia32/compile_c'
+require 'metasm/metasm/cpu/ia32/decompile'
+require 'metasm/metasm/cpu/ia32/debug'

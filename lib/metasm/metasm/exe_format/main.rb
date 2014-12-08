@@ -4,12 +4,12 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/parse'
-require 'metasm/encode'
-require 'metasm/decode'
-require 'metasm/exe_format/serialstruct'
-require 'metasm/os/main'	# VirtualFile
+require 'metasm/metasm/main'
+require 'metasm/metasm/parse'
+require 'metasm/metasm/encode'
+require 'metasm/metasm/decode'
+require 'metasm/metasm/exe_format/serialstruct'
+require 'metasm/metasm/os/main'	# VirtualFile
 
 module Metasm
 class ExeFormat

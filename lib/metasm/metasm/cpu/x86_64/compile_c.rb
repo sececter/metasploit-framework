@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/x86_64/parse'
-require 'metasm/compile_c'
+require 'metasm/metasm/cpu/x86_64/parse'
+require 'metasm/metasm/compile_c'
 
 module Metasm
 class X86_64

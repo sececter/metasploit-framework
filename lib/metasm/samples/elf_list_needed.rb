@@ -12,7 +12,7 @@
 # can be useful when chrooting a binary
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 
 paths = ENV['LD_LIBRARY_PATH'].to_s.split(':') + %w[/usr/lib /lib]

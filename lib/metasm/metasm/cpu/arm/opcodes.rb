@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/cpu/arm/main'
+require 'metasm/metasm/cpu/arm/main'
 
 module Metasm
 class ARM

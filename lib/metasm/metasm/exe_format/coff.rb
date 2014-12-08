@@ -4,7 +4,7 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/exe_format/main'
+require 'metasm/metasm/exe_format/main'
 
 module Metasm
 # the COFF object file format
@@ -459,5 +459,5 @@ class COFFArchive < ExeFormat
 end
 end
 
-require 'metasm/exe_format/coff_encode'
-require 'metasm/exe_format/coff_decode'
+require 'metasm/metasm/exe_format/coff_encode'
+require 'metasm/metasm/exe_format/coff_decode'

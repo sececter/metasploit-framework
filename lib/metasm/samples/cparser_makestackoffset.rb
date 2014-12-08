@@ -10,7 +10,7 @@
 # In verbose mode (ruby -v), instead dumps the parsed header (+ warnings)
 #
 
-require 'metasm'
+require 'metasm/metasm'
 
 filename = ARGV.shift
 abort "usage: #$0 filename" if not File.exist? filename

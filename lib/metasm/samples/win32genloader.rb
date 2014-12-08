@@ -8,7 +8,7 @@
 # The 1st mandatory argument is the name of the target binary to load
 # The 2nd optional argument is the name of the loader to be generated
 
-require 'metasm'
+require 'metasm/metasm'
 
 target = ARGV.shift
 loader = ARGV.shift || "loader.exe"

@@ -5,7 +5,7 @@
 
 
 require 'test/unit'
-require 'metasm'
+require 'metasm/metasm'
 
 class TestExpression < Test::Unit::TestCase
   E = Metasm::Expression

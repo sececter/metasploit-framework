@@ -5,7 +5,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm'
+require 'metasm/metasm'
 $opts = { :execlass => Metasm::MachO }
 load File.join(File.dirname(__FILE__), 'exeencode.rb')
 

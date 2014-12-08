@@ -11,7 +11,7 @@
 # the opcode number is in the low-order byte, and determines the
 # argument format, which may take up to 4 other words
 
-require 'metasm/cpu/dalvik/main'
+require 'metasm/metasm/cpu/dalvik/main'
 
 module Metasm
 class Dalvik

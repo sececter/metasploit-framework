@@ -9,7 +9,7 @@
 # quick demonstration that the disassembler's backtracker works
 #
 
-require 'metasm'
+require 'metasm/metasm'
 Metasm.require 'samples/metasm-shell'
 
 puts <<EOS.encode.decode

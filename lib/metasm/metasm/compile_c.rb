@@ -4,8 +4,8 @@
 #    Licence is LGPL, see LICENCE in the top-level directory
 
 
-require 'metasm/main'
-require 'metasm/parse_c'
+require 'metasm/metasm/main'
+require 'metasm/metasm/parse_c'
 
 module Metasm
 module C

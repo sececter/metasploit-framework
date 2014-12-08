@@ -3,7 +3,7 @@
 #
 #    Licence is LGPL, see LICENCE in the top-level directory
 
-require 'metasm/cpu/z80/main'
+require 'metasm/metasm/cpu/z80/main'
 
 module Metasm
 
