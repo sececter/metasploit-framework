@@ -70,7 +70,7 @@ class Metasploit3 < Msf::Encoder::XorAdditiveFeedback
   end
 
   # Indicate that this module can preserve some registers
-  def preserves_registers?
+  def can_preserve_registers?
     true
   end
 

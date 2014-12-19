@@ -40,6 +40,7 @@ class Auxiliary
   autoload :IAX2,      'msf/core/auxiliary/iax2'
   autoload :NTP,       'msf/core/auxiliary/ntp'
   autoload :NATPMP,    'msf/core/auxiliary/natpmp'
+  autoload :Kademlia,  'msf/core/auxiliary/kademlia'
 
 end
 end
