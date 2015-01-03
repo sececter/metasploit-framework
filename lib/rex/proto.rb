@@ -5,6 +5,7 @@
 #
 
 require 'rex/proto/iax2'
+require 'rex/proto/kerberos'
 
 module Rex
 module Proto

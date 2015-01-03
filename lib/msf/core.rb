@@ -85,3 +85,5 @@ require 'msf/core/session_manager'
 # Modules
 require 'msf/core/module'
 
+# Kerberos Support
+require 'msf/kerberos/client'
