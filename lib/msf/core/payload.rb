@@ -30,6 +30,7 @@ class Payload < Msf::Module
   autoload :Java,    'msf/core/payload/java'
   autoload :Dalvik,  'msf/core/payload/dalvik'
   autoload :Firefox, 'msf/core/payload/firefox'
+  autoload :JSP,     'msf/core/payload/jsp'
 
   ##
   #
