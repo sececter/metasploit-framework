@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    metasploit-framework (4.12.16)
+    metasploit-framework (4.12.17)
       actionpack (~> 4.2.6)
       activerecord (~> 4.2.6)
       activesupport (~> 4.2.6)
@@ -16,7 +16,7 @@ PATH
       metasploit-model
       metasploit-payloads (= 1.1.13)
       metasploit_data_models
-      metasploit_payloads-mettle
+      metasploit_payloads-mettle (= 0.0.6)
       msgpack
       net-ssh
       network_interface
@@ -166,7 +166,7 @@ GEM
       postgres_ext
       railties (~> 4.2.6)
       recog (~> 2.0)
-    metasploit_payloads-mettle (0.0.5)
+    metasploit_payloads-mettle (0.0.6)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -226,6 +226,7 @@ GEM
       rex-text
     rex-java (0.1.2)
     rex-ole (0.1.2)
+      rex-text
     rex-powershell (0.1.1)
       rex-random_identifier
       rex-text
